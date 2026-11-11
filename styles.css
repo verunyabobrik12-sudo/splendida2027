@@ -557,3 +557,15 @@ button,select,input,textarea{font-family:inherit}
 }
 .dark .form h3{color:var(--dark)}
 @media(max-width:520px){.form{padding-top:44px}}
+
+/* ===== Версия 5.1: заголовок в две строки, без оранжевого текста на тёмно-бирюзовом (Вероника, 11.11) ===== */
+.hero h1{font-size:clamp(42px,12vw,56px);line-height:1.04}
+.hero h1,.hero h1 span{white-space:nowrap}
+.hero h1 span{color:#fff}
+@media(min-width:700px){.hero h1{font-size:clamp(46px,8vw,68px)}}
+@media(min-width:960px){.hero h1{font-size:clamp(50px,5.4vw,78px)}}
+/* оранжевым остаются только заливки (кнопки, солнце, плашки), текст на тёмном — белый */
+.fact b,.ship-facts b,.rating .big,.price-m b,.stick b,.dark .hand,.deep .hand{color:#fff}
+.dark .stars,.deep .stars{color:#fff}
+.fact span{color:rgba(255,255,255,.82)}
+.step:nth-child(4) .n{background:var(--dark);color:#fff}
