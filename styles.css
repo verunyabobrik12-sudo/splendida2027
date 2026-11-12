@@ -625,7 +625,6 @@ button,select,input,textarea{font-family:inherit}
 .v-ic{color:var(--dark)}
 /* вопросы */
 .faq-card{position:relative;overflow:hidden;background:#fff;border-radius:var(--r);padding:30px 28px;box-shadow:0 10px 30px rgba(14,72,79,.08)}
-.faq-card::before{content:"";position:absolute;right:-46px;top:-46px;width:150px;height:150px;border-radius:50%;background:var(--peach)}
 .faq-card>*{position:relative}
 .faq-btns{display:grid;gap:10px;margin-top:22px}
 .faq-btns .btn{justify-content:center}
@@ -677,3 +676,18 @@ button,select,input,textarea{font-family:inherit}
 }
 
 .gid-form.sent .gid-row,.gid-form.sent button[type=submit],.gid-form.sent .gid-note{display:none}
+
+/* версия 5.5: осколки мозаики в углах карточек нижней части */
+.shards.s2::before{background:var(--tile)}
+.shards.s2::after{background:var(--orange)}
+.shards.s3::before{background:var(--aegean)}
+.shards.s3::after{background:var(--tile)}
+.faq details.shards::before{width:52px;height:42px}
+.faq details.shards::after{right:20px;width:30px;height:26px}
+.v-ticket .sh{position:absolute;right:0;top:0;width:100px;height:62px;pointer-events:none;z-index:1}
+.v-ticket .sh::before,.v-ticket .sh::after{content:"";position:absolute}
+.v-ticket .sh::before{right:-6px;top:-6px;width:70px;height:56px;background:var(--orange);clip-path:polygon(30% 0,100% 0,100% 70%,62% 48%)}
+.v-ticket .sh::after{right:24px;top:-4px;width:40px;height:34px;background:var(--aegean);clip-path:polygon(0 0,100% 0,70% 90%,10% 60%)}
+.v-ticket>:not(.sh){position:relative;z-index:2}
+.faq details.shards::before{right:-8px;top:-9px;width:44px;height:32px}
+.faq details.shards::after{right:16px;top:-8px;width:24px;height:20px}

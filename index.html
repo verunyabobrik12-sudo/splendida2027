@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=55">
+<link rel="stylesheet" href="styles.css?v=57">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -238,6 +238,8 @@
 </section>
 
 <!-- ЛАЙНЕР -->
+<div class="mosaic" aria-hidden="true"></div>
+
 <section class="sec" id="gidy" aria-labelledby="gid-h">
   <div class="wrap gid">
     <div class="gid-copy">
@@ -255,7 +257,7 @@
       <img src="guides/cover-split.jpg" alt="" loading="lazy" width="450" height="800">
       <img src="guides/cover-korfu.jpg" alt="" loading="lazy" width="450" height="800">
     </div>
-    <form class="gid-form" id="gidForm" novalidate>
+    <form class="gid-form shards s2" id="gidForm" novalidate>
       
       <div class="gid-row">
         <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required aria-label="Имя">
@@ -263,7 +265,7 @@
       </div>
       <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn-gold" type="submit">Получить гайд</button>
-      <p class="small gid-note">Оставьте контакт: менеджер расскажет про даты и условия, а гайды по портам пришлёт после бронирования. Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      <p class="small gid-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
       <div class="gid-msg" id="gidMsg" role="status"></div>
     </form>
   </div>
@@ -357,6 +359,8 @@
 </section>
 
 <!-- ВИЗА -->
+<div class="mosaic" aria-hidden="true"></div>
+
 <section class="sec peach visa" id="viza" aria-labelledby="visa-h">
   <div class="wrap">
     <div class="v-head">
@@ -375,17 +379,17 @@
     </ol>
     <div class="v-bottom">
       <div class="v-offer">
-        <div class="v-ticket">
+        <div class="v-ticket"><i class="sh" aria-hidden="true"></i>
           <span class="v-tag">Для первых 10 человек на каждую дату</span>
           <b>Визовая поддержка бесплатно</b>
           <p>Запись, консультация, проверка и подготовка документов.</p>
           <div class="v-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <small>Десять мест на дату. Дальше поддержка стоит 250 BYN.</small>
         </div>
-        <div class="v-fee"><b>65 €</b><span>визовый и сервисный сбор: оплачивается в визовом центре Греции в белорусских рублях</span></div>
-        <div class="insure"><svg class="v-ic" aria-hidden="true"><use href="#i-shield"/></svg><p><b>Подстраховка.</b> При бронировании предложим страховку от невыезда Белгосстраха: если в визе откажут, она вернёт деньги.</p></div>
+        <div class="v-fee shards"><b>65 €</b><span>визовый и сервисный сбор: оплачивается в визовом центре Греции в белорусских рублях</span></div>
+        <div class="insure shards s2"><svg class="v-ic" aria-hidden="true"><use href="#i-shield"/></svg><p><b>Подстраховка.</b> При бронировании предложим страховку от невыезда Белгосстраха: если в визе откажут, она вернёт деньги.</p></div>
       </div>
-      <div class="award">
+      <div class="award shards s3">
         <div class="medals"><img src="images/medal-2025.png" alt="Медаль «Народный выбор» 2025" loading="lazy"><img src="images/medal-2026.png" alt="Медаль «Народный выбор» 2026" loading="lazy"></div>
         <b>Лидер в номинации «Компания по организации визовой поддержки»</b>
         <p>По итогам Международной бизнес-премии «Народный выбор» в 2025 и 2026 годах. Победителей определяют голосованием потребители, а не жюри.</p>
@@ -399,10 +403,12 @@
 </section>
 
 <!-- ВОПРОСЫ -->
+<div class="mosaic" aria-hidden="true"></div>
+
 <section class="sec mint" id="voprosy" aria-labelledby="faq-h">
   <div class="wrap faq-grid">
     <div class="faq-side">
-      <div class="faq-card">
+      <div class="faq-card shards">
         <h2 id="faq-h">Остались вопросы?</h2>
         <p class="lead">Собрали ответы на самые частые. Если вашего вопроса здесь нет, напишите нам — менеджер ответит лично.</p>
         <div class="faq-btns">
@@ -413,12 +419,12 @@
       </div>
     </div>
     <div class="faq">
-      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>Какой будет отель в Стамбуле?</summary><p>Отель 4–5★ с завтраком, бронируем по системе «Фортуна»: вы заселяетесь в один из отелей этой категории, а какой именно — сообщим ближе к поездке. Категория 4–5★ и завтрак гарантированы.</p></details>
-      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>Говорят ли на борту по-русски?</summary><p>Для рейсов этого маршрута заявлен русскоязычный сервис. Менеджер подтвердит его для вашей даты при бронировании.</p></details>
-      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-heart"/></svg></span>Как кормят на лайнере?</summary><p>Питание уже в цене: шведский стол в буфете и обслуживание за столом в основных ресторанах. Отдельно оплачиваются пакет напитков и рестораны с особой кухней, если захочется.</p></details>
-      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>Можно ли каюту с окном или балконом?</summary><p>Да. Менеджер подберёт каюту с окном или балконом на вашу дату и назовёт доплату. Иногда разница меньше, чем кажется.</p></details>
-      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>Почему не купить круиз напрямую у MSC?</summary><p>Круизная компания продаёт только каюту. У нас к ней добавлены перелёт из Минска, отель с завтраком и три трансфера, помощь с визой и менеджер, который на связи всю поездку.</p></details>
-      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>До какого числа действует цена?</summary><p>Цены на сайте действуют до 30 ноября 2026. Условия бронирования и оплаты менеджер расскажет при расчёте на вашу дату.</p></details>
+      <details class="shards"><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>Какой будет отель в Стамбуле?</summary><p>Отель 4–5★ с завтраком, бронируем по системе «Фортуна»: вы заселяетесь в один из отелей этой категории, а какой именно — сообщим ближе к поездке. Категория 4–5★ и завтрак гарантированы.</p></details>
+      <details class="shards s2"><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>Говорят ли на борту по-русски?</summary><p>Для рейсов этого маршрута заявлен русскоязычный сервис. Менеджер подтвердит его для вашей даты при бронировании.</p></details>
+      <details class="shards s3"><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-heart"/></svg></span>Как кормят на лайнере?</summary><p>Питание уже в цене: шведский стол в буфете и обслуживание за столом в основных ресторанах. Отдельно оплачиваются пакет напитков и рестораны с особой кухней, если захочется.</p></details>
+      <details class="shards"><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>Можно ли каюту с окном или балконом?</summary><p>Да. Менеджер подберёт каюту с окном или балконом на вашу дату и назовёт доплату. Иногда разница меньше, чем кажется.</p></details>
+      <details class="shards s2"><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>Почему не купить круиз напрямую у MSC?</summary><p>Круизная компания продаёт только каюту. У нас к ней добавлены перелёт из Минска, отель с завтраком и три трансфера, помощь с визой и менеджер, который на связи всю поездку.</p></details>
+      <details class="shards s3"><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>До какого числа действует цена?</summary><p>Цены на сайте действуют до 30 ноября 2026. Условия бронирования и оплаты менеджер расскажет при расчёте на вашу дату.</p></details>
     </div>
   </div>
 </section>
@@ -438,7 +444,7 @@
       <p class="contact-phone"><a href="tel:+375447884422">+375 44 788-44-22</a></p>
       <p class="small">Пн–пт 10:00–19:00, сб 10:00–15:00 · <a href="mailto:ndtravel365@gmail.com" style="color:inherit">ndtravel365@gmail.com</a></p>
     </div>
-    <form class="form" id="leadForm" novalidate>
+    <form class="form shards s2" id="leadForm" novalidate>
       <h3>Оставить заявку</h3>
       <div class="field"><label for="f-name">Как к вам обращаться</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
       <div class="field"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+375 __ ___-__-__" required></div>
