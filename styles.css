@@ -720,3 +720,19 @@ button,select,input,textarea{font-family:inherit}
 .cookie-table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px;line-height:1.5}
 .cookie-table th,.cookie-table td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
 .cookie-table th{background:var(--mint);color:var(--dark)}
+
+/* ОТЗЫВЫ v5.7 */
+.rating{gap:6px 24px;margin:22px 0 4px}
+.rating .big{font-size:84px;letter-spacing:-2px}
+.dark .rating .stars{color:var(--orange);font-size:24px;letter-spacing:4px}
+.rating .small{color:rgba(255,255,255,.78)}
+.reviews{gap:18px;padding:10px 20px 22px}
+.rv{width:min(380px,86vw);padding:30px 28px 24px;gap:0;border-radius:26px;box-shadow:0 18px 40px rgba(0,0,0,.18);border-top:6px solid var(--orange)}
+.rv:nth-child(3n+2){border-top-color:var(--tile)}
+.rv:nth-child(3n){border-top-color:var(--aegean)}
+.rv::before{content:"“";position:static;display:block;height:46px;margin:-6px 0 0;font:400 84px/1 var(--serif);color:var(--orange)}
+.dark .rv .stars{color:var(--orange);font-size:16px;letter-spacing:3px;margin-bottom:10px;order:-1}
+.rv q{font-size:17px;line-height:1.6;color:var(--ink);flex:1}
+.rv .who{margin-top:22px;padding-top:18px;border-top:1.5px dashed var(--line);gap:14px}
+.rv .av{width:46px;height:46px;font-size:18px}
+.rv .who b{font-size:16px;margin-bottom:2px}
