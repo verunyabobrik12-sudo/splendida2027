@@ -208,4 +208,21 @@
       function () { msg.className = 'form-msg ok'; msg.textContent = 'Заявка отправлена. Менеджер свяжется с вами.'; f.reset(); back(); },
       function () { msg.className = 'form-msg err'; msg.textContent = 'Не удалось отправить. Позвоните нам: +375 44 788-44-22.'; back(); });
   });
+  /* ---------- Гайды по портам: заявка на гайд (файлы выдаёт менеджер после бронирования) ---------- */
+  var gf = $('#gidForm'), gm = $('#gidMsg');
+  if (gf) gf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (gf.website.value) return;
+    var name = gf.name.value.trim(), contact = gf.phone.value.trim();
+    if (!name || contact.replace(/[^0-9a-zA-Z]/g, '').length < 5) { gm.className = 'gid-msg err'; gm.textContent = 'Укажите имя и телефон или Telegram.'; return; }
+    if (!LEAD_ENDPOINT) { gm.className = 'gid-msg err'; gm.textContent = 'Форма пока не подключена. Напишите нам в Telegram или позвоните: +375 44 788-44-22.'; return; }
+    var d = new URLSearchParams();
+    d.append('name', name); d.append('phone', contact); d.append('plan', 'Гайды по стоянкам (лендинг Splendida 2027)');
+    d.append('comment', '[Гайд]'); d.append('page', location.href);
+    new URLSearchParams(location.search).forEach(function (v, k) { if (/^utm_|^gclid$|^yclid$|^fbclid$/.test(k)) d.append(k, v); });
+    var b = gf.querySelector('button[type=submit]'); b.disabled = true; b.textContent = 'Отправляем…';
+    var ok = function () { gf.classList.add('sent'); gm.className = 'gid-msg ok'; gm.innerHTML = '<b>Спасибо!</b> Менеджер свяжется с вами, расскажет про даты и условия. Гайды по портам пришлём после бронирования.'; };
+    var bad = function () { b.disabled = false; b.textContent = 'Получить гайд'; gm.className = 'gid-msg err'; gm.textContent = 'Не удалось отправить. Позвоните нам: +375 44 788-44-22.'; };
+    fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body: d }).then(ok, bad);
+  });
 })();

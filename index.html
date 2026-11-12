@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=55">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,13 +151,14 @@
           <li>9 ночей на MSC Splendida</li>
           <li>Питание на борту: шведский стол и обслуживание за столом в основных ресторанах</li>
           <li>Портовые и сервисные сборы, чаевые</li>
+          <li>Визовая поддержка бесплатно: для первых 10 человек на каждую дату</li>
         </ul>
       </div>
       <div class="box no">
         <h3>Оплачивается отдельно</h3>
         <ul class="list no">
           <li>Медицинская страховка</li>
-          <li>Визовая поддержка и консульский сбор</li>
+          <li>Консульский (визовый) сбор; визовая поддержка после первых 10 человек на дату — 250 BYN</li>
           <li>Пакет напитков на борту</li>
           <li>Экскурсии на берегу, по желанию</li>
         </ul>
@@ -209,7 +210,7 @@
     <h2 id="fear-h">Что волнует перед первым круизом</h2>
     <p class="lead">Эти вопросы задают почти все, кто собирается в круиз впервые. Отвечаем честно.</p>
     <div class="fears">
-      <div class="fear"><span class="ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><p class="q">А если откажут в визе?</p><p>Визу оформляем вместе: проверим документы до подачи, чтобы не было ошибок. А при бронировании предложим страховку от невыезда Белгосстраха: если в визе всё же откажут, она вернёт деньги.</p></div>
+      <div class="fear"><span class="ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><p class="q">А если откажут в визе?</p><p>Визу оформляем вместе, а для первых 10 человек на каждую дату поддержка бесплатна: проверим документы до подачи, чтобы не было ошибок. А при бронировании предложим страховку от невыезда Белгосстраха: если в визе всё же откажут, она вернёт деньги.</p></div>
       <div class="fear"><span class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><p class="q">Вдруг не успею на лайнер?</p><p>Спешить не придётся. Лайнер уходит только в 23:00, а вы в Стамбуле уже накануне. Трансфер из отеля в порт заказан заранее: останется взять чемодан.</p></div>
       <div class="fear"><span class="ic"><svg aria-hidden="true"><use href="#i-compass"/></svg></span><p class="q">Растеряюсь в чужом городе</p><p>На каждой стоянке у вас 7–10 часов. До поездки менеджер расскажет, что посмотреть в каждом порту и когда вернуться на борт, а в дороге ответит в Telegram или Viber.</p></div>
       <div class="fear"><span class="ic"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><p class="q">Можно ли вам доверять?</p><p>За нас говорят туристы: 5,0 на Яндекс Картах по 75 оценкам. На премии «Народный выбор» нас два года подряд выбирали лучшими в визовой поддержке, и голосовали за это клиенты, а не жюри.</p></div>
@@ -237,6 +238,37 @@
 </section>
 
 <!-- ЛАЙНЕР -->
+<section class="sec" id="gidy" aria-labelledby="gid-h">
+  <div class="wrap gid">
+    <div class="gid-copy">
+      <p class="gid-kicker">В подарок тем, кто бронирует круиз</p>
+      <h2 id="gid-h">Гайды по каждой стоянке: порт без суеты</h2>
+      <p class="lead">Маршрут по часам от трапа и обратно: главные места города, обед там, где едят местные, что попробовать и чего избегать. Всё с картой и ссылками на Google Карты. Гайды получают гости, которые бронируют круиз у нас.</p>
+      <ul class="gid-list">
+        <li><b>Семь гайдов</b> — Стамбул накануне, Корфу, Бари, Триест, Сплит, Афины и Эфес</li>
+        <li><b>У каждого порта свой сюжет</b> — святыня Бари, кофе Триеста, ворота Сплита, часы Акрополя</li>
+        <li><b>Время на всё</b> — чтобы спокойно вернуться на лайнер</li>
+      </ul>
+    </div>
+    <div class="gid-pages" aria-hidden="true">
+      <img src="guides/cover-triest.jpg" alt="" loading="lazy" width="450" height="800">
+      <img src="guides/cover-split.jpg" alt="" loading="lazy" width="450" height="800">
+      <img src="guides/cover-korfu.jpg" alt="" loading="lazy" width="450" height="800">
+    </div>
+    <form class="gid-form" id="gidForm" novalidate>
+      
+      <div class="gid-row">
+        <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required aria-label="Имя">
+        <input type="tel" name="phone" placeholder="Телефон или @telegram" autocomplete="tel" required aria-label="Телефон или Telegram">
+      </div>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-gold" type="submit">Получить гайд</button>
+      <p class="small gid-note">Оставьте контакт: менеджер расскажет про даты и условия, а гайды по портам пришлёт после бронирования. Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      <div class="gid-msg" id="gidMsg" role="status"></div>
+    </form>
+  </div>
+</section>
+
 <section class="sec deep" id="layner" aria-labelledby="ship-h">
   <div class="wrap">
     <h2 id="ship-h">MSC Splendida — ваш дом на девять ночей</h2>
@@ -325,23 +357,33 @@
 </section>
 
 <!-- ВИЗА -->
-<section class="sec" id="viza" aria-labelledby="visa-h">
+<section class="sec peach visa" id="viza" aria-labelledby="visa-h">
   <div class="wrap">
-    <h2 id="visa-h">Виза: оформим вместе</h2>
-    <div class="visa-grid">
+    <div class="v-head">
       <div>
-        <p class="lead" style="margin-top:0">В круизе пять портов Шенгенской зоны: Корфу и Афины в Греции, Бари и Триест в Италии, Сплит в Хорватии. Греция — главная страна в маршруте, поэтому оформляем греческую визу.</p>
-        <ol class="vsteps">
-          <li><b>Консультация</b><span>Проверим паспорт и составим список документов.</span></li>
-          <li><b>Документы</b><span>Анкета и брони круиза, отеля и перелётов.</span></li>
-          <li><b>Запись</b><span>Запишем на подачу в визовый центр.</span></li>
-          <li><b>Проверка</b><span>Проверим документы и соберём пакет для подачи.</span></li>
-        </ol>
-        <div class="visa-cost">
-          <div><b>250 BYN</b><span>визовая поддержка: запись, консультация, проверка и подготовка документов</span></div>
-          <div><b>65 €</b><span>визовый и сервисный сбор, оплачивается в визовом центре Греции в белорусских рублях</span></div>
+        <h2 id="visa-h">Виза: оформим вместе</h2>
+        <p class="lead">В круизе пять портов Шенгенской зоны. Греция — главная страна в маршруте, поэтому оформляем греческую визу.</p>
+        
+      </div>
+      <div class="v-stamp" aria-hidden="true">шенген<b>5</b>портов</div>
+    </div>
+    <ol class="vsteps">
+      <li><b>Консультация</b><span>Проверим паспорт и составим список документов.</span></li>
+      <li><b>Документы</b><span>Анкета и брони круиза, отеля и перелётов.</span></li>
+      <li><b>Запись</b><span>Запишем на подачу в визовый центр.</span></li>
+      <li><b>Проверка</b><span>Проверим документы и соберём пакет для подачи.</span></li>
+    </ol>
+    <div class="v-bottom">
+      <div class="v-offer">
+        <div class="v-ticket">
+          <span class="v-tag">Для первых 10 человек на каждую дату</span>
+          <b>Визовая поддержка бесплатно</b>
+          <p>Запись, консультация, проверка и подготовка документов.</p>
+          <div class="v-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <small>Десять мест на дату. Дальше поддержка стоит 250 BYN.</small>
         </div>
-        <div class="insure"><b>Подстраховка.</b> При бронировании предложим страховку от невыезда Белгосстраха: если в визе откажут, она вернёт деньги.</div>
+        <div class="v-fee"><b>65 €</b><span>визовый и сервисный сбор: оплачивается в визовом центре Греции в белорусских рублях</span></div>
+        <div class="insure"><svg class="v-ic" aria-hidden="true"><use href="#i-shield"/></svg><p><b>Подстраховка.</b> При бронировании предложим страховку от невыезда Белгосстраха: если в визе откажут, она вернёт деньги.</p></div>
       </div>
       <div class="award">
         <div class="medals"><img src="images/medal-2025.png" alt="Медаль «Народный выбор» 2025" loading="lazy"><img src="images/medal-2026.png" alt="Медаль «Народный выбор» 2026" loading="lazy"></div>
@@ -360,17 +402,23 @@
 <section class="sec mint" id="voprosy" aria-labelledby="faq-h">
   <div class="wrap faq-grid">
     <div class="faq-side">
-      <h2 id="faq-h">Остались вопросы?</h2>
-      <p class="lead">Собрали ответы на самые частые. Если вашего вопроса здесь нет, напишите нам — менеджер ответит лично.</p>
-      <a class="btn btn-tg" href="https://t.me/+375447884422" target="_blank" rel="noopener" style="margin-top:22px"><svg aria-hidden="true"><use href="#i-tg"/></svg>Спросить в Telegram</a>
+      <div class="faq-card">
+        <h2 id="faq-h">Остались вопросы?</h2>
+        <p class="lead">Собрали ответы на самые частые. Если вашего вопроса здесь нет, напишите нам — менеджер ответит лично.</p>
+        <div class="faq-btns">
+          <a class="btn btn-tg" href="https://t.me/+375447884422" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Спросить в Telegram</a>
+          <a class="btn btn-dark" href="tel:+375447884422">+375 44 788-44-22</a>
+        </div>
+        <p class="small faq-hrs">Пн–пт 10:00–19:00, сб 10:00–15:00. Отвечаем и в Viber.</p>
+      </div>
     </div>
     <div class="faq">
-      <details><summary>Какой будет отель в Стамбуле?</summary><p>Отель 4–5★ с завтраком, бронируем по системе «Фортуна»: вы заселяетесь в один из отелей этой категории, а какой именно — сообщим ближе к поездке. Категория 4–5★ и завтрак гарантированы.</p></details>
-      <details><summary>Говорят ли на борту по-русски?</summary><p>Для рейсов этого маршрута заявлен русскоязычный сервис. Менеджер подтвердит его для вашей даты при бронировании.</p></details>
-      <details><summary>Как кормят на лайнере?</summary><p>Питание уже в цене: шведский стол в буфете и обслуживание за столом в основных ресторанах. Отдельно оплачиваются пакет напитков и рестораны с особой кухней, если захочется.</p></details>
-      <details><summary>Можно ли каюту с окном или балконом?</summary><p>Да. Менеджер подберёт каюту с окном или балконом на вашу дату и назовёт доплату. Иногда разница меньше, чем кажется.</p></details>
-      <details><summary>Почему не купить круиз напрямую у MSC?</summary><p>Круизная компания продаёт только каюту. У нас к ней добавлены перелёт из Минска, отель с завтраком и три трансфера, помощь с визой и менеджер, который на связи всю поездку.</p></details>
-      <details><summary>До какого числа действует цена?</summary><p>Цены на сайте действуют до 30 ноября 2026. Условия бронирования и оплаты менеджер расскажет при расчёте на вашу дату.</p></details>
+      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>Какой будет отель в Стамбуле?</summary><p>Отель 4–5★ с завтраком, бронируем по системе «Фортуна»: вы заселяетесь в один из отелей этой категории, а какой именно — сообщим ближе к поездке. Категория 4–5★ и завтрак гарантированы.</p></details>
+      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>Говорят ли на борту по-русски?</summary><p>Для рейсов этого маршрута заявлен русскоязычный сервис. Менеджер подтвердит его для вашей даты при бронировании.</p></details>
+      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-heart"/></svg></span>Как кормят на лайнере?</summary><p>Питание уже в цене: шведский стол в буфете и обслуживание за столом в основных ресторанах. Отдельно оплачиваются пакет напитков и рестораны с особой кухней, если захочется.</p></details>
+      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>Можно ли каюту с окном или балконом?</summary><p>Да. Менеджер подберёт каюту с окном или балконом на вашу дату и назовёт доплату. Иногда разница меньше, чем кажется.</p></details>
+      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>Почему не купить круиз напрямую у MSC?</summary><p>Круизная компания продаёт только каюту. У нас к ней добавлены перелёт из Минска, отель с завтраком и три трансфера, помощь с визой и менеджер, который на связи всю поездку.</p></details>
+      <details><summary><span class="q-ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>До какого числа действует цена?</summary><p>Цены на сайте действуют до 30 ноября 2026. Условия бронирования и оплаты менеджер расскажет при расчёте на вашу дату.</p></details>
     </div>
   </div>
 </section>
@@ -431,6 +479,6 @@
 </nav>
 
 <script src="map-data.js"></script>
-<script src="app.js?v=5"></script>
+<script src="app.js?v=55"></script>
 </body>
 </html>

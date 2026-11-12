@@ -569,3 +569,111 @@ button,select,input,textarea{font-family:inherit}
 .dark .stars,.deep .stars{color:#fff}
 .fact span{color:rgba(255,255,255,.82)}
 .step:nth-child(4) .n{background:var(--dark);color:#fff}
+
+/* ВИЗА — версия 5.3: «паспортный контроль» */
+.v-head{display:flex;gap:24px;align-items:flex-start;justify-content:space-between}
+.v-head .lead{margin-top:14px}
+.v-stamp{flex:none;position:relative;width:128px;height:128px;border-radius:50%;border:3px double var(--tile);color:var(--tile);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);font:800 14px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.92}
+.v-stamp b{font:400 44px/1 var(--serif);letter-spacing:0;margin:5px 0 3px}
+.v-stamp::after{content:"";position:absolute;inset:8px;border:1.5px solid currentColor;border-radius:50%;opacity:.4}
+.v-countries{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.v-countries li{display:flex;gap:8px;align-items:baseline;background:#fff;border-radius:999px;padding:9px 18px;box-shadow:0 2px 10px rgba(14,72,79,.07)}
+.v-countries b{color:var(--dark);font-weight:700}
+.v-countries span{color:var(--muted);font-size:14.5px}
+.vsteps{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:1fr;gap:14px;counter-reset:v}
+.vsteps li{counter-increment:v;position:relative;background:#fff;border-radius:var(--r);padding:22px 22px 22px 84px;box-shadow:0 8px 24px rgba(14,72,79,.07)}
+.vsteps li::before{content:counter(v);position:absolute;left:22px;top:22px;width:46px;height:50px;border-radius:23px 23px 8px 8px;background:var(--dark);color:#fff;font:700 20px/50px var(--sans);text-align:center}
+.vsteps li:last-child::before{background:var(--orange);color:var(--dark)}
+.vsteps b{display:block;font-size:19px;margin-bottom:4px;color:var(--dark)}
+.vsteps span{color:var(--muted);font-size:15.5px}
+.v-bottom{display:grid;gap:22px;margin-top:26px}
+.v-offer{display:grid;gap:14px;align-content:start}
+.v-ticket{position:relative;border-radius:var(--r);padding:28px 26px 24px;background:linear-gradient(135deg,var(--orange),#F7B766);color:var(--dark);overflow:hidden}
+.v-ticket::before,.v-ticket::after{content:"";position:absolute;top:50%;width:28px;height:28px;border-radius:50%;background:var(--peach);transform:translateY(-50%)}
+.v-ticket::before{left:-14px}.v-ticket::after{right:-14px}
+.v-tag{display:inline-block;background:var(--dark);color:#fff;border-radius:999px;padding:6px 14px;font:700 13.5px/1.2 var(--sans)}
+.v-ticket b{display:block;font:400 clamp(32px,5.4vw,46px)/1.08 var(--serif);margin:14px 0 8px;color:var(--dark)}
+.v-ticket p{margin:0 0 16px;font-size:16.5px}
+.v-dots{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.v-dots i{display:block;width:18px;height:18px;border-radius:50%;background:var(--dark)}
+.v-ticket small{font-size:14.5px;font-weight:600}
+.v-fee{display:flex;gap:16px;align-items:center;background:#fff;border-radius:var(--r);padding:18px 22px}
+.v-fee b{flex:none;font:700 28px/1 var(--sans);color:var(--dark)}
+.v-fee span{font-size:14.5px;color:var(--muted)}
+.insure{display:flex;gap:14px;align-items:flex-start;margin-top:0;background:var(--dark);color:#fff;border-radius:var(--r);padding:20px 22px}
+.insure p{margin:0;font-size:15.5px}
+.insure b{color:var(--orange)}
+.v-ic{flex:none;width:34px;height:34px;color:var(--orange)}
+@media(min-width:900px){
+  .vsteps{grid-template-columns:repeat(4,1fr);gap:18px}
+  .vsteps li{padding:80px 20px 22px}
+  .vsteps li::before{left:20px;top:20px}
+  .vsteps li:not(:last-child)::after{content:"";position:absolute;top:44px;right:-18px;width:18px;height:0;border-top:2px dashed rgba(14,72,79,.3)}
+  .v-bottom{grid-template-columns:1.25fr .75fr;gap:26px;align-items:stretch}
+}
+@media(max-width:560px){.v-stamp{display:none}}
+
+/* версия 5.4: билет визы без плашек стран, вопросы карточками, блок гайдов */
+.v-ticket{background:linear-gradient(135deg,#0E484F,#15626B);color:#fff}
+.v-tag{background:var(--orange);color:#1F1A0E}
+.v-ticket b{color:#fff}
+.v-ticket p{color:rgba(255,255,255,.88)}
+.v-dots i{background:var(--orange)}
+.v-ticket small{color:rgba(255,255,255,.82);font-weight:500}
+.insure{background:var(--mint);color:var(--ink);border:1.5px solid var(--line)}
+.insure b{color:var(--accent)}
+.v-ic{color:var(--dark)}
+/* вопросы */
+.faq-card{position:relative;overflow:hidden;background:#fff;border-radius:var(--r);padding:30px 28px;box-shadow:0 10px 30px rgba(14,72,79,.08)}
+.faq-card::before{content:"";position:absolute;right:-46px;top:-46px;width:150px;height:150px;border-radius:50%;background:var(--peach)}
+.faq-card>*{position:relative}
+.faq-btns{display:grid;gap:10px;margin-top:22px}
+.faq-btns .btn{justify-content:center}
+.faq-hrs{margin:16px 0 0}
+.faq summary{padding-left:62px}
+.q-ic{position:absolute;left:0;top:50%;transform:translateY(-50%);width:40px;height:44px;border-radius:20px 20px 7px 7px;background:var(--dark);display:grid;place-items:center}
+.q-ic svg{width:21px;height:21px;color:#fff}
+.faq details{box-shadow:0 4px 14px rgba(14,72,79,.05)}
+.faq details[open]{border-color:var(--orange);box-shadow:0 10px 26px rgba(14,72,79,.09)}
+.faq details[open] .q-ic{background:var(--orange)}
+.faq details[open] .q-ic svg{color:var(--dark)}
+.faq details p{padding-left:62px}
+/* гайды */
+.gid{display:grid;gap:30px;align-items:start}
+.gid-kicker{display:inline-block;margin:0 0 14px;padding:6px 14px;border-radius:999px;background:var(--peach);color:var(--accent);font:700 14px/1.2 var(--sans)}
+.gid-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.gid-list li{position:relative;padding-left:30px;color:var(--muted)}
+.gid-list li::before{content:"";position:absolute;left:4px;top:.55em;width:11px;height:11px;border-radius:2px;background:var(--orange);transform:rotate(45deg)}
+.gid-list b{color:var(--dark)}
+.gid-pages{display:flex;justify-content:center;align-items:flex-end;padding:10px 0 0}
+.gid-pages img{width:34%;max-width:210px;border-radius:14px;box-shadow:0 14px 34px rgba(14,72,79,.22);border:4px solid #fff}
+.gid-pages img:nth-child(1){transform:rotate(-6deg) translateX(14px)}
+.gid-pages img:nth-child(2){position:relative;z-index:2;transform:translateY(-14px);width:38%;max-width:240px}
+.gid-pages img:nth-child(3){transform:rotate(6deg) translateX(-14px)}
+.gid-form{background:var(--mint);border-radius:var(--r);padding:26px 24px;display:grid;gap:16px}
+.gid-chips{border:0;margin:0;padding:0}
+.gid-chips legend{font:700 16px/1.3 var(--sans);color:var(--dark);margin-bottom:10px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:block;padding:9px 16px;border-radius:999px;background:#fff;border:1.5px solid var(--line);font-size:15.5px;color:var(--dark);transition:background .15s,border-color .15s}
+.chip input:checked+span{background:var(--dark);border-color:var(--dark);color:#fff}
+.chip input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.gid-row{display:grid;gap:10px}
+.gid-form input[type=text],.gid-form input[type=tel]{width:100%;padding:15px 16px;border-radius:12px;border:1.5px solid var(--line);font:inherit;background:#fff}
+.gid-form .hp{position:absolute;left:-9999px}
+.gid-form .btn{justify-content:center}
+.gid-note{margin:0}
+.gid-msg{font-size:16px}
+.gid-msg.err{color:#B3261E}
+.gid-links{display:grid;gap:8px;margin-top:10px}
+.gid-form.sent .gid-chips,.gid-form.sent .gid-row,.gid-form.sent button[type=submit],.gid-form.sent .gid-note{display:none}
+@media(min-width:900px){
+  .gid{grid-template-columns:1.05fr .95fr;gap:40px 56px}
+  .gid-copy{grid-column:1}
+  .gid-pages{grid-column:2;grid-row:1 / span 2}
+  .gid-form{grid-column:1}
+  .gid-row{grid-template-columns:1fr 1fr}
+}
+
+.gid-form.sent .gid-row,.gid-form.sent button[type=submit],.gid-form.sent .gid-note{display:none}
