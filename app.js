@@ -132,7 +132,7 @@
     if (!lbx || !lbx.showModal) { window.open(src); return; }
     lbImg.src = src; lbImg.alt = alt || ''; lbCap.textContent = cap || alt || ''; lbx.showModal();
   }
-  $$('.g, .gal button, .dipl button, .cabin-ph').forEach(function (b) {
+  $$('.g, .gal button, .dipl button, .cabin-ph, .cabin-up button').forEach(function (b) {
     b.addEventListener('click', function () { var im = b.querySelector('img'); zoom(im.src, im.alt, b.getAttribute('data-cap')); });
   });
   if (card) card.addEventListener('click', function (e) { if (e.target.tagName === 'IMG') zoom(e.target.src, e.target.alt, e.target.alt); });
@@ -190,7 +190,9 @@
 
   /* ---------- Форма ---------- */
   // Адрес приёма заявок (Google Apps Script) пока не создан: пока он пуст, форма никуда не отправляет данные.
-  var LEAD_ENDPOINT = '';
+  function goal(n) { try { if (typeof ym === 'function' && window.__ymId) ym(window.__ymId, 'reachGoal', n); } catch (e) {} }
+  document.addEventListener('click', function (e) { var l = e.target.closest && e.target.closest('a[href^="tel:"],a[href*="t.me/"]'); if (l) goal(l.href.indexOf('tel:') === 0 ? 'phone_click' : 'tg_click'); });
+  var LEAD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyQfVihQJCTMHnhhSUnULqx0MpRn8JEYlelGnfam--8Qh3HZuPI3wp0D2Fv3BnYxvj47g/exec';
   var f = $('#leadForm'), msg = $('#formMsg');
   if (f) f.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -205,7 +207,7 @@
     var b = f.querySelector('button[type=submit]'); b.disabled = true; b.textContent = 'Отправляем…';
     var back = function () { b.disabled = false; b.textContent = 'Отправить заявку'; };
     fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body: dd }).then(
-      function () { msg.className = 'form-msg ok'; msg.textContent = 'Заявка отправлена. Менеджер свяжется с вами.'; f.reset(); back(); },
+      function () { msg.className = 'form-msg ok'; msg.textContent = 'Заявка отправлена. Менеджер свяжется с вами.'; goal('zayavka'); f.reset(); back(); },
       function () { msg.className = 'form-msg err'; msg.textContent = 'Не удалось отправить. Позвоните нам: +375 44 788-44-22.'; back(); });
   });
   /* ---------- Гайды по портам: заявка на гайд (файлы выдаёт менеджер после бронирования) ---------- */
@@ -221,7 +223,7 @@
     d.append('comment', '[Гайд]'); d.append('page', location.href);
     new URLSearchParams(location.search).forEach(function (v, k) { if (/^utm_|^gclid$|^yclid$|^fbclid$/.test(k)) d.append(k, v); });
     var b = gf.querySelector('button[type=submit]'); b.disabled = true; b.textContent = 'Отправляем…';
-    var ok = function () { gf.classList.add('sent'); gm.className = 'gid-msg ok'; gm.innerHTML = '<b>Спасибо!</b> Менеджер свяжется с вами, расскажет про даты и условия. Гайды по портам пришлём после бронирования.'; };
+    var ok = function () { goal('gid'); gf.classList.add('sent'); gm.className = 'gid-msg ok'; gm.innerHTML = '<b>Спасибо!</b> Менеджер свяжется с вами и расскажет про гайды, даты и условия круиза.'; };
     var bad = function () { b.disabled = false; b.textContent = 'Получить гайд'; gm.className = 'gid-msg err'; gm.textContent = 'Не удалось отправить. Позвоните нам: +375 44 788-44-22.'; };
     fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', body: d }).then(ok, bad);
   });

@@ -691,3 +691,32 @@ button,select,input,textarea{font-family:inherit}
 .v-ticket>:not(.sh){position:relative;z-index:2}
 .faq details.shards::before{right:-8px;top:-9px;width:44px;height:32px}
 .faq details.shards::after{right:16px;top:-8px;width:24px;height:20px}
+
+.cabin-up{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.cabin-up button{position:relative;padding:0;border:0;border-radius:12px;overflow:hidden;cursor:zoom-in;background:#eee}
+.cabin-up img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.cabin-up span{position:absolute;left:8px;bottom:8px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--dark);font:700 14px/1.2 var(--sans)}
+
+/* COOKIE */
+.cookie{position:fixed;left:24px;bottom:24px;z-index:150;width:min(520px,calc(100% - 48px));background:#fff;color:var(--ink);border-radius:18px;padding:18px 20px;box-shadow:0 18px 50px rgba(14,72,79,.25);border:1px solid var(--line)}
+.cookie[hidden]{display:none}
+.cookie-text{margin:0 0 12px;font-size:14.5px;line-height:1.55}
+.cookie-settings{margin:0 0 12px;display:grid;gap:8px}
+.cookie-settings[hidden]{display:none}
+.cookie-opt{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.cookie-opt b{color:var(--dark)}
+.cookie-opt input{margin-top:4px;accent-color:var(--accent)}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.cookie-actions [hidden]{display:none}
+.cookie-actions .btn{padding:11px 20px;font-size:14.5px;background:var(--orange);color:#1F1A0E;border:0;border-radius:999px;font-weight:700;cursor:pointer}
+.cookie-btn{border:1.5px solid var(--line);background:transparent;border-radius:999px;padding:10px 16px;font:600 14.5px var(--sans);color:var(--dark);cursor:pointer}
+.legal-links a{color:inherit}
+@media(max-width:680px){.cookie{left:12px;right:12px;width:auto;bottom:76px;padding:14px 16px}}
+.policy{padding:40px 0 60px}.policy .wrap{max-width:860px}
+.policy h1{font-size:clamp(30px,4vw,42px);margin-bottom:8px}.policy h2{font-size:24px;margin:34px 0 10px}
+.policy p,.policy li{font-size:16.5px;line-height:1.7}.policy li{margin-bottom:10px}
+.crumbs{padding:18px 0;font-size:14px}.crumbs span{margin:0 6px}
+.table-scroll{overflow-x:auto;margin:6px 0 16px}
+.cookie-table{border-collapse:collapse;width:100%;min-width:620px;font-size:14.5px;line-height:1.5}
+.cookie-table th,.cookie-table td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+.cookie-table th{background:var(--mint);color:var(--dark)}

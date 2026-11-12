@@ -19,7 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=57">
+<link rel="stylesheet" href="styles.css?v=59">
+<script src="consent.js?v=1"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,6 +161,7 @@
       <div class="box no">
         <h3>Оплачивается отдельно</h3>
         <ul class="list no">
+          <li>Туруслуга агентства — 350 BYN с человека</li>
           <li>Медицинская страховка</li>
           <li>Консульский (визовый) сбор; визовая поддержка после первых 10 человек на дату — 250 BYN</li>
           <li>Пакет напитков на борту</li>
@@ -246,9 +248,9 @@
 <section class="sec" id="gidy" aria-labelledby="gid-h">
   <div class="wrap gid">
     <div class="gid-copy">
-      <p class="gid-kicker">В подарок тем, кто бронирует круиз</p>
+      <p class="gid-kicker">Гайды для гостей круиза</p>
       <h2 id="gid-h">Гайды по каждой стоянке: порт без суеты</h2>
-      <p class="lead">Маршрут по часам от трапа и обратно: главные места города, обед там, где едят местные, что попробовать и чего избегать. Всё с картой и ссылками на Google Карты. Гайды получают гости, которые бронируют круиз у нас.</p>
+      <p class="lead">Маршрут по часам от трапа и обратно: главные места города, обед там, где едят местные, что попробовать и чего избегать. Всё с картой и ссылками на Google Карты.</p>
       <ul class="gid-list">
         <li><b>Семь гайдов</b> — Стамбул накануне, Корфу, Бари, Триест, Сплит, Афины и Эфес</li>
         <li><b>У каждого порта свой сюжет</b> — святыня Бари, кофе Триеста, ворота Сплита, часы Акрополя</li>
@@ -256,9 +258,9 @@
       </ul>
     </div>
     <div class="gid-pages" aria-hidden="true">
+      <img src="guides/pg-triest-3.jpg" alt="" loading="lazy" width="450" height="800">
       <img src="guides/cover-triest.jpg" alt="" loading="lazy" width="450" height="800">
-      <img src="guides/cover-split.jpg" alt="" loading="lazy" width="450" height="800">
-      <img src="guides/cover-korfu.jpg" alt="" loading="lazy" width="450" height="800">
+      <img src="guides/pg-triest-5.jpg" alt="" loading="lazy" width="450" height="800">
     </div>
     <form class="gid-form shards s2" id="gidForm" novalidate>
       
@@ -268,7 +270,7 @@
       </div>
       <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn-gold" type="submit">Получить гайд</button>
-      <p class="small gid-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      <p class="small gid-note">Оставьте контакт: менеджер расскажет про гайды, даты и условия круиза. Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
       <div class="gid-msg" id="gidMsg" role="status"></div>
     </form>
   </div>
@@ -305,7 +307,11 @@
           <li>Телевизор, телефон, сейф и мини-бар</li>
           <li>Wi-Fi за отдельную плату</li>
         </ul>
-        <p class="price-note">Цены — за человека при двухместном размещении во внутренней каюте. Каюту с окном или балконом подберём за доплату.</p>
+        <p class="price-note">Цены — за человека при двухместном размещении во внутренней каюте. Если хочется каюту классом выше, менеджер поможет её подобрать и назовёт доплату на вашу дату.</p>
+        <div class="cabin-up">
+          <button type="button" data-cap="Каюта с окном (иллюминатором)"><img src="images/cabin-03.jpg" alt="Каюта с окном на MSC Splendida" width="640" height="427" loading="lazy"><span>С окном</span></button>
+          <button type="button" data-cap="Каюта с балконом"><img src="images/balcony-02.jpg" alt="Каюта с балконом на MSC Splendida" width="640" height="427" loading="lazy"><span>С балконом</span></button>
+        </div>
       </div>
     </div>
   </div>
@@ -475,7 +481,8 @@
 <footer class="foot">
   <div class="wrap">
     <p><b>НеобхоДима Тревел</b> — туристическая компания из Минска. Круизы, туры по Европе, визовая поддержка. Офис: ул. Притыцкого, 29.</p>
-    <p class="small">УНП 193772332 · Цены за одного человека при двухместном размещении во внутренней каюте, действуют до 30 ноября 2026. Программа ориентировочная: туроператор вправе вносить изменения в расписание и маршрут круиза без сокращения объёма и снижения качества услуг.</p>
+    <p class="small">УНП 193772332 · Цены за одного человека при двухместном размещении во внутренней каюте, без туруслуги агентства (350 BYN с человека), действуют до 30 ноября 2026. Программа ориентировочная: туроператор вправе вносить изменения в расписание и маршрут круиза без сокращения объёма и снижения качества услуг.</p>
+    <p class="small legal-links"><a href="politika-cookie.html">Политика cookie</a> · <a href="https://travel365.by/turistam/politika-konfidentsialnosti/" target="_blank" rel="noopener">Политика обработки персональных данных</a> · <a href="#" data-cookie-settings>Настройки cookie</a></p>
   </div>
 </footer>
 
@@ -488,6 +495,6 @@
 </nav>
 
 <script src="map-data.js"></script>
-<script src="app.js?v=55"></script>
+<script src="app.js?v=57"></script>
 </body>
 </html>
