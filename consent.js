@@ -5,7 +5,7 @@
  * Подключается на каждой странице: <script src="consent.js"></script> в <head>.
  */
 (function () {
-  var COUNTER = 0; // номер счётчика Метрики для splendida.travel365.by (пока не создан: 0 = Метрика не грузится)
+  var COUNTER = 114218009; // счётчик «Splendida 2027» (аккаунт NDtavelDshauchenko)
   var KEY = 'splendida_cookie_consent';
   var YEAR = 365 * 24 * 60 * 60 * 1000;
 
